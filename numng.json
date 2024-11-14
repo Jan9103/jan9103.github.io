@@ -1,0 +1,6 @@
+{
+  "name": "jan9103.github.io",
+  "linkin": {
+    "nutils:nulib/nutils": {"name": "nutils", "source_uri": "https://github.com/jan9103/nutils"}
+  }
+}

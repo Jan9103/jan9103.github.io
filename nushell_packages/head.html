@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Nushell Packages</title>
+  <meta charset="utf-8">
+  <meta nmae="author" content="Jan9103">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+  %intro%
+  <p><b>Note:</b> This is currently a experimental thing and the tagging is far from complete</p>
+
+  <span class="q">Which Package-Manager do you use?</span><br class="q">
+  <input class="q" type="radio" id="pm_numng" name="pm" value="numng" checked>
+  <label class="q" for="pm_numng"><a href="https://github.com/Jan9103/numng">jan9103/numng</a> + <a href="https://github.com/Jan9103/numng_repo">jan9103/numng_repo</a></label><br class="q">
+  <input class="q" type="radio" id="pm_nupm" name="pm" value="nupm">
+  <label class="q" for="pm_nupm"><a href="https://github.com/nushell/nupm">nushell/nupm</a> + <a href="https://github.com/nushell/nupm/tree/main/registry">nushell/nupm/registry</a> (this overview page is incomplete for this combination)</label><br class="q">
+  <br class="q">
+
+  <span class="q">What should the package do?</span><br class="q">
+  <input class="q" type="checkbox" id="tag_lib" name="type" value="lib">
+  <label class="q" for="tag_lib">Export libraries</label><br class="q">
+  <input class="q" type="checkbox" id="tag_bin" name="type" value="config">
+  <label class="q" for="tag_bin">Export binaries</label><br class="q">
+  <input class="q" type="checkbox" id="tag_config" name="type" value="config">
+  <label class="q" for="tag_config">Export shell configuration</label><br class="q">
+    <input class="q" style="margin-left: 2em" type="checkbox" id="tag_prompt" name="type" value="prompt">
+    <label class="q" for="tag_prompt">Shell prompt</label><br class="q">
+    <input class="q" style="margin-left: 2em;" type="checkbox" id="tag_completion" name="type" value="completion">
+    <label class="q" for="tag_completion">Tab completion (all in one: jan9103/nu-snippets/integration/carapace)</label><br class="q">
+  <span class="q"><a href="themes.html">Shell-Themes</a></span><br class="q">
+  <br class="q">
+
+  <span class="q">Context</span><br class="q">
+  <input class="q" type="radio" id="tag_any_context" name="context" value="any" checked>
+  <label class="q" for="tag_any_context">Any</label><br class="q">
+  <input class="q" type="radio" id="tag_shell" name="context" value="shell">
+  <label class="q" for="tag_shell">Interactive shell</label><br class="q">
+  <input class="q" type="radio" id="tag_script" name="context" value="script">
+  <label class="q" for="tag_script">Scripting</label><br class="q">
+  <br class="q">
+
+  <input class="q" type="checkbox" id="tag_plugin" name="tag_plugin" value="a" checked>
+  <label class="q" for="tag_plugin">Include plugins</label><br class="q">
+  <input class="q" type="checkbox" id="status_active" name="status_active" value="a" checked>
+  <label class="q" for="status_active">Only show active packages</label><br class="q">
+  <br class="q">
+
+  <hr>
+
+  <ul id="items">
