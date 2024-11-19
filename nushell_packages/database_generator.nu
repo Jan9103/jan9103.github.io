@@ -8,7 +8,7 @@ def main [repo_base_path: path, database_file: path] {
       "name": $package._.name
       "repo": $package._.source_uri
       "names": {"numng": $package._.name}
-      "format": $package._.package_format
+      "format": $package._.package_format?
       "tags": ([
         (if "shell_config" in $package._ { "config" })
         (if $package._.name =~ "nu_plugin_[^/]+$" { "plugin" })
