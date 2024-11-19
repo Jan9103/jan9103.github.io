@@ -46,6 +46,8 @@ input[type="radio"] {
 
 #pm_nupm:checked  ~ #items > :not(.pm_nupm)  { display: none; }
 #pm_numng:checked ~ #items > :not(.pm_numng) { display: none; }
+#pm_nupm:checked  ~ #items > li > div.smc > div.pm_numng  { display: none; }
+#pm_numng:checked ~ #items > li > div.smc > div.pm_nupm  { display: none; }
 
 #tag_lib:checked    ~ #items > :not(.tag_lib)    { display: none; }
 #tag_bin:checked    ~ #items > :not(.tag_bin)    { display: none; }
