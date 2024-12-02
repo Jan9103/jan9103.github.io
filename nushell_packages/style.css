@@ -46,8 +46,8 @@ input[type="radio"] {
 
 #pm_nupm:checked  ~ #items > :not(.pm_nupm)  { display: none; }
 #pm_numng:checked ~ #items > :not(.pm_numng) { display: none; }
-#pm_nupm:checked  ~ #items > li > div.smc > div.pm_numng  { display: none; }
-#pm_numng:checked ~ #items > li > div.smc > div.pm_nupm  { display: none; }
+#pm_nupm:checked  ~ #items > li > div.smc > div > div.pm_numng { display: none; }
+#pm_numng:checked ~ #items > li > div.smc > div > div.pm_nupm  { display: none; }
 
 #tag_lib:checked    ~ #items > :not(.tag_lib)    { display: none; }
 #tag_bin:checked    ~ #items > :not(.tag_bin)    { display: none; }
@@ -64,3 +64,11 @@ input[type="radio"] {
 pre { background-color: #212; color: #FAF; padding: 0.5em; border-radius: 0.4em; }
 
 .smc { margin: 0.5em; border-top: 2px dotted darkgray; padding: 0.5em; }
+.y { color: #FA8; }
+div.si > div.pm_nupm > pre::before { content: "nupm install "; color: #FAF; }
+div.si::before { content: "Installation:"; font-weight: bold; }
+div.sx::before { content: "Exported libraries: "; font-weight: bold; }
+li.ps::before { content: "Status: "; }
+li.pf::before { content: "Format: "; }
+li.pv::before { content: "Version: "; }
+li.pl::before { content: "License: "; }

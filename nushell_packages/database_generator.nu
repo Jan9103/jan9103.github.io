@@ -17,6 +17,7 @@ def main [repo_base_path: path, database_file: path] {
         (if "bin" in $package._ { "bin" })
         (if $package._.package_format? == "packer.nu" { "shell" })
       ] | append ($package._.":tags"? | default []) | uniq | where $it != null)
+      "exported_libs": ($package._.nu_libs? | default {} | columns)
     }
     let result = (if ":nupm_name" in $package._ { $result | insert names.nupm $package._.":nupm_name" } else { $result })
     let result = (if ":description" in $package._ { $result | insert description $package._.":description" } else { $result })

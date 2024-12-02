@@ -35,15 +35,17 @@ def generate_file [head: string, database: list, tail: string]: nothing -> strin
           '<ul>'
           $'<li><a href="(html escape $pkg.repo)">repo</a></li>'
           $'<li><a href="https://github.com/Jan9103/numng_repo/blob/main/repo/(html escape $pkg.name).json">definition</a></li>'
-          (if 'license' in $pkg { $'<li>License: (html escape $pkg.license)</li>' } else { '' })
-          (if 'version' in $pkg { $'<li>Version: (html escape $pkg.version)</li>' } else { '' })
-          (if not ($pkg.format in [null, "numng"]) { $'<li>Format: (html escape $pkg.format)</li>' } else { '' })
-          (if 'status' in $pkg { $'<li>Status: (html escape $pkg.status)</li>' } else { '' })
+          (if 'license' in $pkg { $'<li class="pl">(html escape $pkg.license)</li>' } else { '' })
+          (if 'version' in $pkg { $'<li class="pv">(html escape $pkg.version)</li>' } else { '' })
+          (if not ($pkg.format in [null, "numng"]) { $'<li class="pf">(html escape $pkg.format)</li>' } else { '' })
+          (if 'status' in $pkg { $'<li class="ps">(html escape $pkg.status)</li>' } else { '' })
           '</ul>'
           '<div class="smc">'
-          'Installation:'
-          (if "nupm" in $pkg.names {$'<div class="pm_nupm"><pre>nupm install (html escape $pkg.names.nupm)</pre></div>'} else {''})
-          (if "numng" in $pkg.names {$'<div class="pm_numng"><pre>{"name": "(html escape $pkg.names.numng)"}</pre></div>'} else {''})
+            '<div class="si">'
+              (if "nupm" in $pkg.names {$'<div class="pm_nupm"><pre class="y">(html escape $pkg.names.nupm)</pre></div>'} else {''})
+              (if "numng" in $pkg.names {$'<div class="pm_numng"><pre>{<span class="y">"name"</span>: <span class="y">"(html escape $pkg.names.numng)"</span>}</pre></div>'} else {''})
+            '</div>'
+            (if not ($pkg.exported_libs? in [null, []]) { "<div class="sx"><ul>" + ($pkg.exported_libs | each {|i| $'<li>(html escape $i)</li>' } | str join '') + "</ul></div>" } else {''})
           '</div>'
           '</li>'
         ]
