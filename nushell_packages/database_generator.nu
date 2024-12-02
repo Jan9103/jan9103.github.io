@@ -12,6 +12,7 @@ def main [repo_base_path: path, database_file: path] {
       "tags": ([
         (if "shell_config" in $package._ { "config" })
         (if $package._.name =~ "nu_plugin_[^/]+$" { "plugin" })
+        (if "nu_plugins" in $package._ { "plugin" })
         (if "nu_libs" in $package._ { "lib" })
         (if "bin" in $package._ { "bin" })
         (if $package._.package_format? == "packer.nu" { "shell" })
@@ -20,6 +21,7 @@ def main [repo_base_path: path, database_file: path] {
     let result = (if ":nupm_name" in $package._ { $result | insert names.nupm $package._.":nupm_name" } else { $result })
     let result = (if ":description" in $package._ { $result | insert description $package._.":description" } else { $result })
     let result = (if ":status" in $package._ { $result | insert status $package._.":status" } else { $result })
+    let result = (if ":license" in $package._ { $result | insert license $package._.":license" } else { $result })
     $result
   }
   | to json --raw  # direct conversion to compress it
