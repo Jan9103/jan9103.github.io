@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nushell Package Management</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Jan9103">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Package Management in NUshell</h1>
+    <p>
+      I currently can't fully recommend a single one.
+      All are a rough experience on some ends, missing features, or similar.
+      So you will have to pick one yourself.
+    </p>
+    <!--
+    <h2>TL:DR</h2>
+    <ul>
+      <li>
+        <b><a href="https://github.com/nushell/nupm">nupm</a></b> (state: 2025-04-19)
+        <ul>
+          <li class="g">By the nushell team.</li>
+          <li class="g">Supports scripts and libraries. And via custom install-script technically everything.</li>
+          <li class="r">In a "experimental" state.</li>
+          <li class="r">Seems to be abandoned.</li>
+          <li class="r">Requires manual downloading of dependencies.</li>
+        </ul>
+      </li>
+      <li>
+        <b><a href="https://github.com/Mettwasser/nucrab">nucrab</a></b> (state: 2025-04-19)
+        <ul>
+          <li>Rust remimplementation of nupm.</li>
+          <li class="g">Adds autod-dowload.</li>
+          <li class="r">Still missing some of nupm's features.</li>
+        </ul>
+      </li>
+
+      <li>
+        <b><a href="https://github.com/jan9103/numng">numng</a></b> (state: 2025-04-19)
+        <ul>
+          <li class="g">Supports config-snippets, libraries, scripts, project-management, etc.</li>
+          <li class="g">Big optional registry.</li>
+          <li class="g">Supports both its own and nupm packages.</li>
+          <li class="r">In a "experimental" state.</li>
+          <li class="r">In the middle of a rewrite.</li>
+        </ul>
+      </li>
+
+      <li>
+        <b><a href="https://github.com/Jan9103/packer.nu">packer.nu</a></b>
+        <ul>
+          <li class="r">In maintenance mode and deprecated (superseeded by numng).</li>
+          <li class="g">Supports config-snippets and scripts.</li>
+        </ul>
+      </li>
+      <li>
+        <b><a href="https://github.com/nupac/nupac">nupac</a></b> (state: 2025-04-19)
+        <ul>
+          <li class="r">Archived since 2023.</li>
+        </ul>
+      </li>
+      <li>
+        <b><a href="https://github.com/kubouch/nuun">nuun</a></b> (state: 2025-04-19)
+        <ul>
+          <li class="r">Seems to be inactive.</li>
+        </ul>
+      </li>
+      <li>
+        <b><a href="https://github.com/vyadh/nut">nut</a></b> (state: 2025-04-19)
+        <ul>
+          <li class="r">"Nut does not exist" (it is only a proposal?).</li>
+        </ul>
+      </li>
+    </ul>
+    -->
+
+
+    <h2>Side by side</h2>
+    <h3>Package formats</h3>
+    <p>
+      <b>Note:</b> A build-script can theoretically do anything (including installing another package-manager).
+      Thus i only count native features.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Install-Script</th>
+          <th>Libraries</th>
+          <th>Shell-Config</th>
+          <th>Nu-Plugins</th>
+          <th>Scripts</th>
+          <th>Registry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/nushell/nupm">nupm</a></td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="r">no</td>
+          <td class="r">no</td>
+          <td class="g">yes</td>
+          <td class="g"><a href="https://github.com/nushell/nupm/tree/main/registry">yes (size: &gt;=24)</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/jan9103/numng">numng</a></td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="g"><a href="https://jan9103.github.io/nushell_packages/">yes (size: &gt;=767)</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Jan9103/packer.nu">packer.nu</a></td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="g">yes</td>
+          <td class="r">no</td>
+          <td class="r">no</td>
+          <td><a href="https://github.com/Jan9103/nushell_inpw/tree/main/registry">3rd party (size: 4)</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/nupac/nupac">nupac</a></td>
+          <td class="g">yes</td>
+          <td class="r">no (?)</td>
+          <td class="g">yes</td>
+          <td class="r">no</td>
+          <td class="r">no (?)</td>
+          <td class="g"><a href="https://github.com/nupac/nupac/tree/main/modules">yes (size: 3)</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/kubouch/nuun">nuun</a></td>
+          <td class="g">yes</td>
+          <td class="r">no (?)</td>
+          <td class="r">no (?)</td>
+          <td class="r">no (?)</td>
+          <td class="g">yes</td>
+          <td class="r"><a href="https://github.com/kubouch/nuun/tree/main/packages">yes (size: &gt;=1)</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/vyadh/nut">nut</a></td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Package managers</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Nu versions</th>
+          <th>Package format</th>
+          <th>Style</th>
+          <th>Written in</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://github.com/nushell/nupm">nupm</a></td>
+          <td class="r">experimental / dormant</td>
+          <td>nightly</td>
+          <td><ul><li>nupm</li></ul></td>
+          <td>imperative</td>
+          <td>nu</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Mettwasser/nucrab">nucrab</a></td>
+          <td>?</td>
+          <td>?</td>
+          <td><ul><li>nupm</li></ul></td>
+          <td>imperative</td>
+          <td>rust</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/jan9103/numng">numng</a></td>
+          <td class="r">experimental</td>
+          <td class="g">latest + recent</td>
+          <td><ul>
+            <li>numng</li>
+            <li>nupm</li>
+            <li>packer.nu</li>
+          </ul></td>
+          <td>declarative</td>
+          <td>python (<a href="https://github.com/Jan9103/numng/issues/1">soon&trade; rust</a>)</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/Jan9103/packer.nu">packer.nu</a></td>
+          <td>deprecated / maintained</td>
+          <td class="g">latest + recent</td>
+          <td><ul><li>packer.nu</li></ul></td>
+          <td>declarative or <a href="https://github.com/Jan9103/nushell_inpw">imperative</a></td>
+          <td>nu</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/nupac/nupac">nupac</a></td>
+          <td class="r">archived</td>
+          <td class="r">0.73.0</td>
+          <td><ul><li>nupac</li></ul></td>
+          <td>imperative</td>
+          <td>nu</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/kubouch/nuun">nuun</a></td>
+          <td class="r">test bed / dormant</td>
+          <td>?</td>
+          <td><ul><li>nuun</li></ul></td>
+          <td>imperative</td>
+          <td>nu</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
