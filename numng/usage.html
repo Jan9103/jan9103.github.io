@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numng usage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- fix mobile devices -->
+  </head>
+  <body>
+    <h1>Numng usage</h1>
+
+    <h2>TL;DR</h2>
+    <p>Applying and updating your shell config: <pre>numng -n b -u</pre></p>
+
+    <h2>Global arguments</h2>
+    <p>These arguments have to be specified <b>before</b> the subcommand due to python limitation.</p>
+    <table>
+      <tr><th>Argument</th><th>Short</th><th>Type</th><th>Description</th></tr>
+      <tr><td><pre>--nu-config<pre></td><td><pre>-n</pre></td><td>flag</td><td>Let the command target the shell-config instead of a project config</td></tr>
+      <tr><td><pre>--verbose</pre></td><td><pre>-v</pre></td><td>flag</td><td>Let numng describe more precisely what it is currently doing</td></tr>
+      <tr><td><pre>--package-file</pre></td><td><pre>-p</pre></td><td>file-path</td><td>Specify a <code>numng.json</code> file to use (defaults to <pre>numng.json</pre> in the current directory)</td></tr>
+    </table>
+
+    <h2>Build sub-command</h2>
+    <p>sub-command: <pre>build</pre> (short: <pre>b</pre>)</p>
+    <p>The process of applying/activating a configuration is called <code>building</code>.</p>
+
+    <h3>Build arguments</h3>
+    <table>
+      <tr><th>Argument</th><th>Short</th><th>Type</th><th>Description</th></tr>
+      <tr><td><pre>--pull-updates</pre></td><td><pre>-u</pre></td><td>flag (no extra arguments)</td><td>Update the registry and packages if possible. Otherwise it will only contact the internet for new packages.</td></tr>
+      <tr><td><pre>--overlay-file</pre></td><td><pre>-o</pre></td><td>path</td><td>Generate a file, which can be loaded using <pre>overlay use ./FILE.nu</pre>, to enable the environment at the given path. (NOTE: a few things only work with script and not overlay files)</td></tr>
+      <tr><td><pre>--script-file</pre></td><td><pre>-s</pre></td><td>path</td><td>Generate a file, which can be loaded using <pre>source ./FILE.nu</pre>, to enable the environment at the given path. (in the shell-scope this defaults to <pre>SHELL_CONFIG_DIR/load_script.nu</pre>)</td></tr>
+      <tr><td><pre>--nupm-home</pre></td><td></td><td>path</td><td>Defines a nupm_home directory. In the shell-scope this defaults to <pre>NUMNG_HOME/nu_config_nupm_home</pre>.</td></tr>
+      <tr><td><pre>--allow-build-commands</pre></td><td><pre>-b</pre></td><td>boolean (<pre>true</pre> or <pre>false</pre>)</td><td>Override the <pre>"allow_build_commands"</pre> option in your base package</td></tr>
+    </table>
+
+    <h2>Init sub-command</h2>
+    <p>sub-command: <pre>init</pre> (short: <pre>i</pre>)</p>
+    <p>This command creates a new <code>numng.json</code> file to reduce the amount of writing you have to do.</p>
+    <p>When used in <code>config</code>-scope this command will also offer to <a href="./installation.html">install numng</a></p>
+    <p>This command currently has no available arguments</p>
+  </body>
+</html>

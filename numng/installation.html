@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>numng installation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- fix mobile devices -->
+  </head>
+  <body>
+    <h1>Numng installation</h1>
+    <h2>System dependencies</h2>
+    <p>These are programs <code>numng</code> requires in order to work properly. You can usually install them with your system package manager (<code>apt</code>, <code>pacman</code>, etc).</p>
+    <table>
+      <tr><th>Name / Website</th><th>apt</th><th>pacman</th><th>nix</th><th>xbps</th></tr>
+      <tr><td><a href="https://git-scm.com">git</a></td><td><code>git</code></td><td><code>git</code></td><td><code>git</code></td><td><code>git</code></td></tr>
+      <tr><td><a href="https://www.python.org/">python3</a></td><td><code>python3</code></td><td><code>python</code></td><td><code>python3Full</code></td><td><code>python3</code></td></tr>
+      <tr><td><a href="https://www.nushell.sh/">nushell</a></td><td>(not available)</td><td><code>nushell</code></td><td><code>nushell</code></td><td><code>nushell</code></td></tr>
+    </table>
+
+    <h2>Installation</h2>
+    <ol>
+      <li>Open a nushell instance</li>
+      <li>Run <pre>http get --raw "https://raw.githubusercontent.com/Jan9103/numng/main/numng.py" | save -r numng.py</pre> todownload numng, which includes a install-assistant.</li>
+      <li>
+        Run <pre>python3 numng.py --nu-config init</pre>. This will run the install-assistant and do the following:
+        <ol>
+          <li>It generates a basic <code>numng.json<code> with a dependency on numng itself. By installing <code>numng</code> using itself it can self-update in the future.</li>
+          <li>It append the loader-snippet to your nushell config.</li>
+          <li>It executes <pre>numng --nu-config build</pre> in order to apply the generated <code>numng.json</code> and install <code>numng</code> that way.</li>
+        </ol>
+      </li>
+    </ol>
+
+    <h2>Post-installation steps</h2>
+    <ul>
+      <li>You can find your <code>numng.json</code> in a directory called <code>numng</code> within your nushell config directory (on linux: <pre>~/.config/nushell/numng/numng.json</pre>).</li>
+      <li>You can find a list of packages at <a href="https://jan9103.github.io/nushell_packages/">the package index</a></li>
+      <li>You can find a basic usage guide <a href="./usage.html">here</a></li>
+      <li>
+        Usually <code>numng</code> installed binaries (including itself) are only available within <code>nushell</code>. But you can just add <pre>~/.local/share/nushell/numng/nu_config_nupm_home/bin</pre> to the <code>PATH</code> to change that.
+        <ul>
+          <li>This makes it possible to install nushell via numng: <pre>{"name": "nushell/nushell", "version": "latest"}</pre> (you can also use <pre>"version": "git"</pre>)</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

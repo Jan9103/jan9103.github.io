@@ -128,7 +128,11 @@ export def code [
   }
 }
 
-def highlight_nu_code [code]: nothing -> string {
+def highlight_nu_code [code: string]: nothing -> string {
+  print -e '---'
+  print -e $code
+  print -e '---'
+
   $code
   | nu-highlight
   | split row (0x[1b 5b] | decode "utf-8")
@@ -172,10 +176,6 @@ export def t [--jsonly, ...a]: nothing -> string {
 
 export def notice [a]: nothing -> string {
   $'<div class="notice_box"><b>Notice:</b> ($a)</div>'
-}
-
-export def video [video_code, transcript]: nothing -> string {
-  $'<div class="fmt_Video">(numlal $video_code)</div><div class="fmt_Text"><p class="cmt">Video transcript:</p>(numlal $transcript)<p class="cmt">Video transcript end</p></div>'
 }
 
 export def comment [...a]: nothing -> string {
