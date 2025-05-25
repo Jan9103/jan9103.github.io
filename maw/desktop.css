@@ -1,0 +1,43 @@
+#player_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+#que_view_toggler {
+  width: 50px;
+}
+
+#player_title {
+  font-size: 1.7em;
+}
+
+#player_author {
+  font-size: 1.2em;
+}
+
+.sview {
+  width: 35%;
+  min-width: 500px;
+  border-radius: 0 0 0 25px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-left: var(--border);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#itemlist {
+  padding-left: 10px;
+}
+
+#itemlist img {
+  border-radius: 10px;
+}
+
+#filter_table {
+  /* yes this is fairly ugly, but the one in .sview for some reason does nothing */
+  margin-bottom: 30vh;
+}

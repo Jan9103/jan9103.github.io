@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css" media="screen and (max-device-width:  999px)">
+    <link rel="stylesheet" href="./desktop.css" media="screen and (min-device-width: 1000px)">
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="filter_view" class="gone sview">
+        <h2>
+          <button onclick="g(&quot;filter_view&quot;).classList.add(&quot;gone&quot;)">X</button>
+          Filter
+        </h2>
+        <div id="text_filter_container">
+          <input type="search" id="text_filter">
+          <button id="text_filter_apply_button">Apply text-filter</button>
+        </div>
+        <div id="filter_table"></div>
+      </div>
+      <div id="que_view" class="gone sview">
+        <h2>
+          <button onclick="g(&quot;que_view&quot;).classList.add(&quot;gone&quot;)">X</button>
+          Que
+        </h2>
+        <ul id="que_items"></ul>
+      </div>
+      <div style="float:left; min-height:100vh; height:fit-content;">
+        <button onclick="g(&quot;filter_view&quot;).classList.toggle(&quot;gone&quot;)" style="float:right;margin-right:10px">=</button>
+        <ul id="top-pagelist"></ul>
+        <table id="itemlist" style="height:fit-content"></table>
+        <ul id="bottom-pagelist"></ul>
+        <div style="height:30vh"></div>
+      </div>
+    </div>
+
+
+    <div id="player">
+      <div><img id="player_img" src=""></div>
+      <div class="spacer"></div>
+      <div style="float: left; overflow: hidden; flex-grow: 1">
+        <div style="display:flex;width:100%">
+          <div style="overflow:hidden;flex-grow:1">
+            <span id="player_title">[Select a title to start listening]</span><br>
+            <span id="player_author">[Select a title to start listening]</span>
+          </div>
+          <button onclick="g(&quot;que_view&quot;).classList.toggle(&quot;gone&quot;)" style="margin-right:10px" id="que_view_toggler">=</button>
+        </div>
+        <div style="display: flex">
+          <div style="float: left">
+            <button onclick="play_previous()">⏮</button>
+            <button onclick="play_next()">⏭</button>
+          </div>
+          <audio id="player_audio" onended="play_next()" controls style="float: left">
+            <source id="player_audio_src" src=""></source>
+          </audio>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

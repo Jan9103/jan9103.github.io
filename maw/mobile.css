@@ -1,0 +1,46 @@
+* {
+  overflow-x: hidden;
+}
+
+#que_view>h2>button {
+  background-color: var(--fg);
+  color: var(--bg-0);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#player_img {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  float: left;
+  margin-left: 2px;
+}
+
+#player_audio::-webkit-media-controls-mute-button,
+#player_audio::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+#player .spacer {
+  display: none;
+}
+
+#itemlist td:nth(3) {
+  display: none;
+}
+
+#itemlist {
+  white-space: normal;
+}
+
+/*#que_view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  border-left: 1px solid #aaa;
+  padding-left: 10px;
+}*/
