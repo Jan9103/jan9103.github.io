@@ -30,13 +30,10 @@ export def PAGE [
     '</ul></footer></body></html>'
   ] | str join ''
 }
-def numll [a: list]: nothing -> string {
-  $a | each {|i| afm $i } | str join ' '
-}
 
 def afm [a]: nothing -> string {
   match ($a | describe | split row '<' | get 0) {
-    'list' => { numll $a }
+    'list' => { $a | each {|i| afm $i } | str join ' ' }
     'string' => { $a }
     'record' => { record_table $a }
     'date' => { $a | format date '%F' }
@@ -61,7 +58,11 @@ def afm [a]: nothing -> string {
   }
 }
 alias numlal = afm
+alias numll = afm
 
+export def c [...a]: nothing -> string {
+  $a | each { afm $in } | str join ''
+}
 export def ul [...a]: nothing -> string {
   '<ul>' + ($a | each {|i|
     $'<li>(numlal $i)</li>'
@@ -116,14 +117,9 @@ export def code [
     "nu" | "nushell" => { '<div class="cb"><pre>' + (highlight_nu_code $code) + '</pre></div>' }
     _ => {
       # syntax-highlight
-      let tmp = (mktemp --suffix $'.($language)')
-      $code | save --force $tmp
-      let res = (
-        ^pygmentize -f html $tmp
-        | str replace '<span></span>' ''
-      )
-      rm -p $tmp
-      $res
+      $code
+      | ^pygmentize -f html
+      | str replace '<span></span>' ''
     }
   }
 }
@@ -180,4 +176,30 @@ export def video [video_code, transcript]: nothing -> string {
 
 export def comment [...a]: nothing -> string {
   $'<p class="cmt">(numll $a)</p>'
+}
+
+export def ntable [
+  --header-row: list
+  ...a: list
+]: nothing -> string {
+  [
+    '<table>'
+    ...(
+      if $header_row != null {
+        [
+          '<tr>'
+          ...($header_row | each {|cell| $'<th>(afm $cell)</th>'})
+          '</tr>'
+        ]
+      } else { [] }
+    )
+    ...($a | each {|row|
+      [
+        '<tr>'
+        ...($row | each {|cell| $'<td>(afm $cell)</td>'})
+        '</tr>'
+      ]
+    })
+    '</table>'
+  ] | flatten | str join ''
 }
