@@ -1,4 +1,4 @@
-use ../nulib/nutils/html.nu
+use ../../nulib/nutils/html.nu
 
 def main [] {
   let head: string = (open --raw ./head.html)
