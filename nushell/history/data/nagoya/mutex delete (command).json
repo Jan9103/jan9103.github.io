@@ -1,0 +1,8 @@
+{"changes": {
+  "2.0.0": ["Moved from nagoya/mutex to nagoya/f/mutex"],
+  "1.0.4": [
+    "added to 'mod.nu' -> indirect import possible",
+    "nu 0.102 compatability"
+  ],
+  "1.0.2": ["Added"]
+}}

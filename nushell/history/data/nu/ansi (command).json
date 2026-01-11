@@ -1,0 +1,15 @@
+{"changes": {
+  "0.106.0": [
+    "Added blink fast",
+    "Added reverse",
+    "Added double underline",
+    "Added reset bold",
+    "Added reset dimmed",
+    "Added reset italic",
+    "Added reset underline",
+    "Added reset blink",
+    "Added reset reverse",
+    "Added reset hidden",
+    "Added reset strike"
+  ]
+}}

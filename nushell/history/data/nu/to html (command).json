@@ -1,0 +1,3 @@
+{"changes": {
+  "0.106.0": ["Floats now get stored with a decimal point to preserve the type (float 1 -> 1.0)"]
+}}

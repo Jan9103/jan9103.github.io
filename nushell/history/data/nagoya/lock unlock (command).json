@@ -1,0 +1,5 @@
+{"changes": {
+  "2.0.0": ["Moved from nagoya/lock to nagoya/f/lock"],
+  "1.0.4": ["nu 0.102 compatability"],
+  "1.0.0": ["Added"]
+}}

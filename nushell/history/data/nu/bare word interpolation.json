@@ -1,0 +1,4 @@
+{"changes": {
+  "0.106.0": ["Can no longer be used at both ends at the same time: ($x)/foo/($x) does no longer work"],
+  "0.105.0": ["Added"]
+}}

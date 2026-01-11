@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nu History</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="./dark.css"  media="(prefers-color-scheme: dark)">
+    <script src="main.js" type="module" defer></script>
+  </head>
+  <body>
+    <nav>
+      <span>Nu History</span>
+      <input list="packages" name="package" id="package" value="nushell">
+      <datalist id="packages"></datalist>
+      <input list="features" name="feature" id="feature">
+      <datalist id="features"></datalist>
+      <button id="open">open</button>
+    </nav>
+    <hr>
+    <p><b>Status:</b> Nu version 0.106.0</p>
+    <article id="main">
+      <h1>Nu History</h1>
+      <h2>Usage</h2>
+      <ol>
+        <li>Enter the project name (nu, std, nu_plugin_gstat, etc) into the first field at the top</li>
+        <li>Search for the feature (command, config variable, etc) in the second field at the top</li>
+        <li>Press 'open'</li>
+      </ol>
+      <h2>Notes</h2>
+      <ul>
+        <li>This is a best-effort fan page based on the <a href="https://www.nushell.sh/blog/">official changelog</a></li>
+        <li>This page might be outdated</li>
+        <li>If a page does not contain a initial "Added" it means that it has been added in a version before this project started</li>
+      </ul>
+    </article>
+  </body>
+</html>

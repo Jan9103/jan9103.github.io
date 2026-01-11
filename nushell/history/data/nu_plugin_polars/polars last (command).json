@@ -1,0 +1,6 @@
+{"changes": {
+  "0.106.0": [
+    "Only return one line by default",
+    "Added groupby support"
+  ]
+}}

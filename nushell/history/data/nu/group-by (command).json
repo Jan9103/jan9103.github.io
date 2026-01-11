@@ -1,0 +1,3 @@
+{"changes": {
+  "0.106.0": ["'null | group-by --to-table' now returns a empty list"]
+}}

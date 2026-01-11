@@ -1,0 +1,200 @@
+{
+  "rss": {
+    "ext": ["rss"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu-snippets", "active", false, "https://github.com/Jan9103/nu-snippets/blob/main/file_formats/rss.nu"]
+    ]
+  }
+  "lrc": {
+    "ext": ["lrc"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu-snippets", "active", false, "https://github.com/Jan9103/nu-snippets/blob/main/file_formats/lrc.nu"]
+    ]
+  }
+  "srt": {
+    "ext": ["srt"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu-snippets", "active", false, "https://github.com/Jan9103/nu-snippets/blob/main/file_formats/srt.nu"]
+    ]
+  }
+  "bencode": {
+    "ext": ["bencode", "torrent", "bencoded"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu-snippets", "active", false, "https://github.com/Jan9103/nu-snippets/blob/main/file_formats/bencode.nu"]
+      ["bencode.nu", "archived", false, "https://github.com/Jan9103/bencode.nu"]
+      ["nu_plugin_from_bencode", "?", true, "https://github.com/bluk/nu_plugin_from_bencode"]
+    ]
+  }
+  "atom": {
+    "ext": ["atom"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nushell_atom_feed", "archived", false, "https://github.com/Jan9103/nushell_atom_feed"]
+    ]
+  }
+  "bam": {
+    "ext": ["bam"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "bcf": {
+    "ext": ["bcf"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "vcf": {
+    "ext": ["vcf"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "bed": {
+    "ext": ["bed"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "cram": {
+    "ext": ["cram"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "fasta": {
+    "ext": ["fasta"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "fastq": {
+    "ext": ["fastq"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "gff3": {
+    "ext": ["gff3"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "sam": {
+    "ext": ["sam"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "gfa": {
+    "ext": ["gfa"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bio", "?", true, "https://github.com/Euphrasiologist/nu_plugin_bio"]
+    ]
+  }
+  "bson": {
+    "ext": ["bson"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_bson", "active", true, "https://github.com/Kissaki/nu_plugin_bson"]
+    ]
+  }
+  "gzip": {
+    "ext": ["gz"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_compress", "active", true, "https://github.com/yybit/nu_plugin_compress"]
+    ]
+  }
+  "zstd": {
+    "ext": ["zst"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_compress", "active", true, "https://github.com/yybit/nu_plugin_compress"]
+    ]
+  }
+  "xz": {
+    "ext": ["xz"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_compress", "active", true, "https://github.com/yybit/nu_plugin_compress"]
+    ]
+  }
+  "bzip2": {
+    "ext": ["bz2"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_compress", "active", true, "https://github.com/yybit/nu_plugin_compress"]
+    ]
+  }
+  "dicom": {
+    "ext": ["dcm"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_dcm", "?", true, "https://github.com/realcundo/nu_plugin_dcm"]
+    ]
+  }
+  "eml": {
+    "ext": ["eml"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_formats", "active", true, "https://github.com/nushell/nushell/tree/main/crates/nu_plugin_formats"]
+    ]
+  }
+  "ics": {
+    "ext": ["ics"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_formats", "active", true, "https://github.com/nushell/nushell/tree/main/crates/nu_plugin_formats"]
+    ]
+  }
+  "ini": {
+    "ext": ["ini"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_formats", "active", true, "https://github.com/nushell/nushell/tree/main/crates/nu_plugin_formats"]
+    ]
+  }
+  "vcf": {
+    "ext": ["vcf"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_formats", "active", true, "https://github.com/nushell/nushell/tree/main/crates/nu_plugin_formats"]
+    ]
+  }
+  "pcap": {
+    "ext": ["pcap"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_format_pcap", "?", true, "https://github.com/b4nst/nu_plugin_format_pcap"]
+    ]
+  }
+  "beancount": {
+    "ext": ["beancount"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_from_beancount", "archived", true, "https://github.com/jcornaz/nu_plugin_from_beancount"]
+    ]
+  }
+  "hdf5": {
+    "ext": ["hdf5"]
+    "p": [
+      ["name", "status", "is_plugin", "link"];
+      ["nu_plugin_from_hdf5", "?", true, "https://github.com/Berrysoft/nu_plugin_from_hdf5"]
+    ]
+  }
+}

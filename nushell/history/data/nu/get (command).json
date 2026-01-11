@@ -1,0 +1,6 @@
+{"changes": {
+  "0.106.0": [
+    "Renamed '--ignore-errors' (aka '-i') to '--optional' ('-o')",
+    "'null | get a?' is no longer a error"
+  ]
+}}

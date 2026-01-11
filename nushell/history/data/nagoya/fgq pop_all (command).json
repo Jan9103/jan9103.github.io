@@ -1,0 +1,6 @@
+{"changes": {
+  "2.0.0": ["Moved from nagoya/fgq to nagoya/f/fgq"],
+  "1.0.4": ["nu 0.102 compatability"],
+  "1.0.3": ["Fixed (often crashed before)"],
+  "1.0.2": ["Added"]
+}}
