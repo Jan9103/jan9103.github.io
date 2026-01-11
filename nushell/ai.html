@@ -1,0 +1,52 @@
+<style>html{color:#fff;background:#000}a{color:#aaf}code{background:#333}</style><h1 id=my-opinion-on-llm-nu>My opinion on LLM + Nu</h1><p>First of:<ul><li>i am bad with words.<li>this is my opinion - we can disagree.<ul><li>i live in my echo-chamber, and so do you.<li>just because everything is political in the USA does not mean it is
+here too.</ul><li>yes i know i do not contribute a lot and thus am not really in a
+position to critizise people who do</ul><h2 id=my-problems-with-ai>My problems with AI</h2><ul><li>Climate<ul><li>More power usage<li>Coal…</ul><li>The companies make prices even worse.<ul><li><a href="https://www.youtube.com/watch?v=YN6BEUA4jNU">they don't pay
+for their power</a>.<li>GPU, RAM, etc prices rise for normal consumers, but not them.<li>the goverment is preparing to bail them out<li>etc.</ul><li>It makes people dumber and believe all kinds of BS.<ul><li>slob posts on "reliable" sites.<li>all search results being AI generated copies of a fox-"news"
+article.<li>AI-search being wrong.<li>etc.</ul><li>Search results suck.<ul><li>No, it does not work as a replacement (i tried gpt4o via ddg for a
+while).<ul><li>I once asked it "floppy disk emoji", it told me it does not exist,
+then i pasted it and it tried to gaslight me that yes, but no..<li>Its sources have nothing to do with what it says ("yes your problems
+is extremely common" - no, you have 0 evidence..)</ul></ul><li>Copyright<ul><li>Until it is solved every project using it is illegal in my
+eyes.<li>Lie to me once (about only using data you have the rights to), shame
+on me, Lie to me twice, shame on you, Lie to me 50 times, i will never
+trust you again about anything (data-protection, copyright, safety,
+etc).<ul><li>meta torrenting<li>datasets containing books<li>shutterstock watermarks<li>wrong license for FISR<li>etc</ul><li>Also: Why do we care about images, but not code?</ul><li>The code is bad<ul><li>Cloudflare/Microsoft error frequence<li>From what i heard it looks good at a microscopic level, but bad at
+high-level, and it slowly destroys your codebase</ul><li>its first and primary goal is to make you happy (tell you you are
+great, your opinion is right, etc)<ul><li><code>is my code good</code> -> yes<li><code>point out every single issues with this code</code> ->
+invents new issues<li><code>why is 9+10=21?</code><li><code>how many rocks should i eat per day?</code><li>it gets stuck on its opinion and refuses to reevaluate from
+scratch<li>everything mentioned has to be important..</ul></ul><p>Also if you say "yikes" to {tailwind loosing 75% of its employees due
+to Ai, curl being overwhealmed by AI-slob, etc}, how about not
+monetarely supporting that company?o<h2 id=nus-current-situation>Nu's current situation</h2><p>Nu feels like a AI community.<br>Its not a single thing, but just the sum of a lot of things.<br>Some feel at home in such communities, I do not.<ul><li>For a while >33% of discord profiles had
+<code>zed</code>/claude/.. or similar in their tag/description/..<li><code>#help</code> gets treated like a GPT windows<ul><li>just dump error and <code>fix it</code>. no thanks, etc.<li>some don't read the error/code at all (someone had
+<code>def [foo # arg1] {…</code> - and despite the error,
+sytax-highlight, lsp, etc all pointing it out they still posted it; also
+no thanks/..)</ul><li>before core-team-meets start <code>zed</code>/.. get discussed
+positively<li>if you search for new github-repos with nu you get vibecoded stuff
+and tools for helping with vibecoding<li>there are multiple AI channels in the discord<li>many of the more prominent community members have AI/blockchain/..
+in their other projects<li>people advertising their vibe-code buisness multiple times a month
+in <code>#general</code> (and doing nothing else) get zero
+reprocussions<li><code>mcp</code> is apparently now a default feature<li>vibe-coded commits<ul><li>disclosure is good<ul><li>the comment in the discord about
+<code>just removing claude as co-author and thus not ending up on the list</code>
+caused <strong>strong</strong> feelings inside of me..<ul><li>even if that does not happen it has still shaken my trust even more
+that retroactively removing a disclosure made by the commit author is
+being discussed..</ul></ul><li>once again: all the anti-AI stuff from above<li>when i noticed the first disclosed commit within the
+<code>mcp</code> i disliked it, but it was behind a
+disabled-by-default-feature-flag (which non-slob-producers don't
+enable), so i did not speak up<li>while writing this i found a vibe-coded PR which obviously had ZERO
+human review.. please add a "you understand your code" requirement to
+the PR-template (tho they also did not touch the template, so they
+probably did not read that.. in my repo depending on the justification
+that would be a ban)</ul></ul><p>Once again: when should you speak up?<br>I am a random user (not a core-team member or anything).<br>Each step was small and it felt like most core-members are at least not
+opposed to it.<br>And saying <code>no</code> to the mcp-commit would've felt like i am
+criticising and gate-keeping one person (and since i had a bad first
+impression due to the blockchain stuff on the profile, despite the
+person turning out nice, i would feel like i am picking on them).<br>I also suspect that the vibe-code PR review was like
+<code>i am gonna ignore that - i am not opposed enough to speak up (and critisize the author), so i'll just review the code / ignore the PR</code>.<p>If i found nu today, and new about all this i would probably not try
+it.<br>If there was a good alternative i would probably have left.<br>And it has dampened my motivation to interact with nu:<ul><li>I spend less and less time working on my nu-related repos the more i
+notice<ul><li>I archived/abandoned some repos since i probably won't find the
+motivation for all my projects<li>I do not choose nu for new projects</ul><li>I slowly remove dependencies on nu. Partially due to nu's
+instability, but also because i am unsure of its future.<li>But i am generally not in the best head-space, so well..</ul><h2 id=ideas-what-to-do>Ideas what to do</h2><ul><li>Hiding the use of AI<ul><li><strong>NO</strong></ul><li>Moving MCP out<ul><li>removing it from default features: yes<li>own repo within <code>github.com/nushell</code>: idk, but be aware
+that it will be even more prominent (easier to find, etc) and in
+combination with other signs it might put me off as a new user</ul><li>Sit down, discuss, write rules, add them to the repo, link to that
+from the PR-template/README/..<ul><li>Clear cut lines avoid "i don't want to be mean and decline
+this"<li>If someone notices frog-boiling they can point somewhere<li>People can easily see where nu stands and decide to (not) use
+it</ul></ul>
