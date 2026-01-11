@@ -9,11 +9,14 @@
   </head>
   <body>
     <h1>Package Management in NUshell</h1>
+    <p>Last update: 2025-01-11</p>
     <p>
       I currently can't fully recommend a single one.
       All are a rough experience on some ends, missing features, or similar.
       So you will have to pick one yourself.
     </p>
+    <p>It also feels like all projects are more or less dormant / abandoned.
+      People probably stopped working on it once it reached their minimum requirements.</p>
 
     <h2>Side by side</h2>
     <h3>Package formats</h3>
@@ -21,9 +24,7 @@
       <b>Note:</b> A build-script can theoretically do anything (including installing another package-manager).
       Thus i only count native features.
     </p>
-    <p>
-      Since nupm is backed by the nushell team and has the widest support i would recommend choosing it.
-    </p>
+    <p>Since the nupm format is backed by the nushell team and has the widest support i would recommend choosing it for your project.</p>
     <table>
       <thead>
         <tr>
@@ -116,7 +117,7 @@
       <tbody>
         <tr>
           <td><a href="https://github.com/nushell/nupm">nupm</a></td>
-          <td class="r">experimental / dormant</td>
+          <td class="r">experimental</td>
           <td>nightly</td>
           <td><ul><li>nupm</li></ul></td>
           <td>imperative</td>
@@ -124,15 +125,15 @@
         </tr>
         <tr>
           <td><a href="https://github.com/Mettwasser/nucrab">nucrab</a></td>
-          <td>1 commit</td>
+          <td class=r>looks abandoned</td>
           <td>?</td>
           <td><ul><li>nupm</li></ul></td>
           <td>imperative</td>
           <td>rust</td>
         </tr>
         <tr>
-          <td><a href="https://github.com/jan9103/numng">numng</a></td>
-          <td class="r">experimental / big rework</td>
+          <td><a href="https://github.com/jan9103/numng">numng (1)</a></td>
+          <td class="r">experimental / <a href="https://github.com/Jan9103/numng/issues/1">succeeded</a></td>
           <td class="g">latest + recent</td>
           <td><ul>
             <li>numng (1)</li>
@@ -140,11 +141,11 @@
             <li>packer.nu</li>
           </ul></td>
           <td>declarative</td>
-          <td>python (<a href="https://github.com/Jan9103/numng/issues/1">soon&trade; rust</a>)</td>
+          <td>python (<a href="https://github.com/Jan9103/numng/issues/1"></a>)</td>
         </tr>
         <tr>
           <td><a href="https://github.com/Jan9103/packer.nu">packer.nu</a></td>
-          <td>deprecated / maintained</td>
+          <td class="r">deprecated</td>
           <td class="g">latest + recent</td>
           <td><ul><li>packer.nu</li></ul></td>
           <td>declarative or <a href="https://github.com/Jan9103/nushell_inpw">imperative</a></td>
