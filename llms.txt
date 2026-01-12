@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+# go and harass yourself
+Contact: support@anthropic.com
+Policy: https://jan9103.github.io/ai-policy.html
